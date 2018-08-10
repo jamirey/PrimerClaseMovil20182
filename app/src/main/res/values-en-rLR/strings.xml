@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Calculadora</string>
+    <string name="titulo">CALCULATOR</string>
+    <string name="guardar">save</string>
+    <string name="limpiar">clear</string>
+    <string name="primer_numero">fist number</string>
+    <string name="segundo_numero">second number</string>
+</resources>
