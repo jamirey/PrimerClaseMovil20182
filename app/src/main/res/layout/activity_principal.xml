@@ -7,14 +7,24 @@
     tools:context="com.holamundo.calculadora.Principal">
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="79dp">
 
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:text="@string/titulo"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/txtPrimerNumero"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -22,27 +32,21 @@
             android:inputType="number" />
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/txtSegundoNumero"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="57dp"
             android:ems="10"
             android:hint="@string/segundo_numero"
             android:inputType="number" />
 
         <Spinner
-            android:id="@+id/spinner"
+            android:id="@+id/cmbOpciones"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView" />
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <Button
@@ -50,24 +54,28 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/guardar" />
+                android:onClick="calcular"
+                android:text="@string/Calcular" />
 
             <Button
                 android:id="@+id/button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="Limpiar"
                 android:text="@string/limpiar" />
 
         </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtResultado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="387dp"
-        android:layout_height="39dp"
-        android:text="@string/titulo"
-        android:textAlignment="center"
-        android:textSize="24sp"
-        android:textStyle="bold" />
 </android.support.constraint.ConstraintLayout>

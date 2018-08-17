@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Calculadora</string>
+    <string name="app_name">Calculator</string>
     <string name="titulo">CALCULATOR</string>
-    <string name="guardar">save</string>
-    <string name="limpiar">clear</string>
-    <string name="primer_numero">fist number</string>
-    <string name="segundo_numero">second number</string>
+    <string name="Calcular">Save</string>
+    <string name="limpiar">Clear</string>
+    <string name="primer_numero">Fist Number</string>
+    <string name="segundo_numero">Second Number</string>
+    <string name="suma">Addition</string>
+    <string name="resta">Subtraction</string>
+    <string name="multiplicacion">Multiplication</string>
+    <string name="division">Division</string>
+    <string name="seleccione">Choose an Operation</string>
 </resources>
