@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.ResourceCursorAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Principal extends AppCompatActivity {
 
@@ -44,28 +45,60 @@ public class Principal extends AppCompatActivity {
 
         int opcion;
         double num1, num2, resultado = 0;
+        if (Validar()) {
 
-        opcion = operaciones.getSelectedItemPosition();
-        num1 = Double.parseDouble(n1.getText().toString());
-        num2 = Double.parseDouble(n2.getText().toString());
+            opcion = operaciones.getSelectedItemPosition();
+            num1 = Double.parseDouble(n1.getText().toString());
+            num2 = Double.parseDouble(n2.getText().toString());
 
-        switch (opcion) {
+            switch (opcion) {
 
-            case 1:
-                resultado = Metodos.sumar(num1, num2);
-                break;
-            case 2:
-                resultado = Metodos.resta(num1, num2);
-            case 3:
-                resultado = Metodos.multiplicacion(num1, num2);
-            case 4:
-                resultado = Metodos.division(num1, num2);
+                case 1:
+                    resultado = Metodos.sumar(num1, num2);
+                    break;
+                case 2:
+                    resultado = Metodos.resta(num1, num2);
+                    break;
+                case 3:
+                    resultado = Metodos.multiplicacion(num1, num2);
+                    break;
+                case 4:
+                    resultado = Metodos.division(num1, num2);
+                    break;
 
 
+            }
+            res.setText("" + String.format("%.2f", resultado));
         }
-        res.setText("" + String.format("%.2f", resultado));
+
+    }
+    public boolean Validar(){
+        int o = operaciones.getSelectedItemPosition();
+        if (n1.getText().toString().isEmpty()){
+            n1.setError(recursos.getString(R.string.error1);
+            n1.requestFocus();
+            return false;
+        }
+
+        if( n2.getText().toString().isEmpty()){
+            n2.setError(recursos.getString(R.string.error_2));
+            n2.requestFocus();
+            return false;
+        }
+
+
+    if (o ==0){
+        Toast.makeText(this,recursos.getString(R.string.error_3),
+        Toast.LENGTH_SHORT).show();
+        return false;
     }
 
+    if (o == 4 && Double.parseDouble(n2.getText().toString())==0){
+        n2.setError(recursos.getString(R.string.error_4));
+        n2.requestFocus();
+        return false;
+    }
+    }
     public void  Limpiar (View v){
 
         n1.setText("");

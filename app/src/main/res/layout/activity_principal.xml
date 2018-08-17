@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/primer_numero"
-            android:inputType="number" />
+            android:inputType="number|numberSigned|numberDecimal" />
 
         <EditText
             android:id="@+id/txtSegundoNumero"
@@ -37,7 +37,7 @@
             android:layout_height="57dp"
             android:ems="10"
             android:hint="@string/segundo_numero"
-            android:inputType="number" />
+            android:inputType="number|numberSigned|numberDecimal" />
 
         <Spinner
             android:id="@+id/cmbOpciones"

@@ -10,6 +10,10 @@
     <string name="multiplicacion">Multiplicacion</string>
     <string name="division">Division</string>
     <string name="seleccione">Seleccione una Operacion</string>
+    <string name="error_1">Digite el numero uno</string>
+    <string name="error_2">Digite el numero dos</string>
+    <string name="error_3">Seleccione una Operacion</string>
+    <string name="error1">El numero dos no puede ser cero</string>
 
     <string-array name="opciones">
         <item>@string/seleccione</item>
