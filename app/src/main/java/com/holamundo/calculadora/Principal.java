@@ -72,32 +72,33 @@ public class Principal extends AppCompatActivity {
         }
 
     }
-    public boolean Validar(){
+    public boolean Validar() {
         int o = operaciones.getSelectedItemPosition();
-        if (n1.getText().toString().isEmpty()){
-            n1.setError(recursos.getString(R.string.error1);
+        if (n1.getText().toString().isEmpty()) {
+            n1.setError(recursos.getString(R.string.error1));
             n1.requestFocus();
             return false;
         }
 
-        if( n2.getText().toString().isEmpty()){
+        if (n2.getText().toString().isEmpty()) {
             n2.setError(recursos.getString(R.string.error_2));
             n2.requestFocus();
             return false;
         }
 
 
-    if (o ==0){
-        Toast.makeText(this,recursos.getString(R.string.error_3),
-        Toast.LENGTH_SHORT).show();
-        return false;
-    }
+        if (o == 0) {
+            Toast.makeText(this, recursos.getString(R.string.error_3),
+                    Toast.LENGTH_SHORT).show();
+            return false;
+        }
 
-    if (o == 4 && Double.parseDouble(n2.getText().toString())==0){
-        n2.setError(recursos.getString(R.string.error_4));
-        n2.requestFocus();
-        return false;
-    }
+        if (o == 4 && Double.parseDouble(n2.getText().toString()) == 0) {
+            n2.setError(recursos.getString(R.string.error_4));
+            n2.requestFocus();
+            return false;
+        }
+        return true;
     }
     public void  Limpiar (View v){
 

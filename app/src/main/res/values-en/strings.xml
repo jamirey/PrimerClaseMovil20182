@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">Calculator</string>
     <string name="titulo">CALCULATOR</string>
-    <string name="Calcular">Save</string>
+    <string name="Calcular">Calculate</string>
     <string name="limpiar">Clear</string>
     <string name="primer_numero">Fist Number</string>
     <string name="segundo_numero">Second Number</string>
